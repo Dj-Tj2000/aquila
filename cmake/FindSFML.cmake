@@ -26,6 +26,9 @@
 #            - Now the test for the requested components is also implemented.
 #            - It also will only link to the requested components
 #            - You can chose wich debug/nondebug static/shared versions of the librarys you want to link to
+# 2024-10-12 - Add Choice to use SFML
+
+IF(BUILD_SFML)
 
 SET(SFML_LIBRARY "")
 SET(SFML_INCLUDE_DIR "")
@@ -208,3 +211,5 @@ ENDIF(NOT SFML_FOUND)
 
 INCLUDE(FindPackageHandleStandardArgs)
 FIND_PACKAGE_HANDLE_STANDARD_ARGS(SFML DEFAULT_MSG SFML_LIBRARY SFML_INCLUDE_DIR)
+
+ENDIF(BUILD_SFML)
